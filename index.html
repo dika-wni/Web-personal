@@ -166,7 +166,7 @@
                             <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
                                 <i data-lucide="search" class="w-4 h-4"></i>
                             </span>
-                            <input type="text" id="store-search" placeholder="Cari akun, rank, cheat, prime..." class="w-full pl-9 pr-4 py-2.5 bg-slate-900/90 border border-slate-800 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-500 transition-all">
+                            <input type="text" id="store-search" placeholder="Cari akun, rank, cheat, joki..." class="w-full pl-9 pr-4 py-2.5 bg-slate-900/90 border border-slate-800 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-500 transition-all">
                         </div>
                     </div>
 
@@ -290,12 +290,12 @@
 
                     <div class="glass-panel p-4 rounded-2xl space-y-3">
                         <h3 class="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center gap-1.5">
-                            <i data-lucide="shield-alert" class="w-4 h-4 text-cyan-400"></i> FAQ Toko
+                            <i data-lucide="shield-alert" class="w-4 h-4 text-cyan-400"></i> FAQ Toko & Ketentuan Joki
                         </h3>
                         <div class="space-y-2 text-xs">
                             <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
-                                <p class="font-bold text-slate-200 mb-1">Q: Apakah akun di DAF Store aman?</p>
-                                <p class="text-slate-400">A: 100% aman bergaransi. Data dikirim langsung via WhatsApp setelah checkout terverifikasi.</p>
+                                <p class="font-bold text-slate-200 mb-1">Q: Ketentuan Joki & Garansi Keamanan?</p>
+                                <p class="text-slate-400">A: Akun dijamin aman dari banned. <b>Larangan Menabrak (Log-in Ganda):</b> Pembeli dilarang log-in saat proses joki berlangsung tanpa izin. Tersedia kompensasi keterlambatan berupa bonus bintang/pengembalian sebagian dana.</p>
                             </div>
                         </div>
                     </div>
@@ -376,7 +376,7 @@
                             <input type="hidden" id="edit-product-id" value="">
                             <div>
                                 <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-300 mb-1">Judul Produk</label>
-                                <input type="text" id="prod-title" required placeholder="e.g. Akun FF Old Incubator / Cheat MLBB Root" class="w-full px-3 py-2.5 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-amber-500">
+                                <input type="text" id="prod-title" required placeholder="e.g. Akun FF Old / MLBB Mythical Immortal / Joki Rank" class="w-full px-3 py-2.5 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 text-xs focus:outline-none focus:border-amber-500">
                             </div>
 
                             <div class="grid grid-cols-2 gap-3">
@@ -388,7 +388,7 @@
                                         <option value="PUBG">PUBG Mobile (Akun)</option>
                                         <option value="VALORANT">Valorant (Akun)</option>
                                         <option value="CHEAT">Cheat & Tools</option>
-                                        <option value="JOKI">Joki & TopUp</option>
+                                        <option value="JOKI">Joki (FF / MLBB)</option>
                                         <option value="FILE">File & Lainnya</option>
                                     </select>
                                 </div>
@@ -397,7 +397,8 @@
                                     <select id="prod-login-type" class="w-full px-3 py-2.5 bg-slate-900/90 border border-slate-700 rounded-xl text-white text-xs focus:outline-none focus:border-amber-500">
                                         <option value="Google">Google / Gmail</option>
                                         <option value="FB">Facebook</option>
-                                        <option value="Moonton">Moonton Account</option>
+                                        <option value="Guest">Guest Account</option>
+                                        <option value="Moonton">Moonton Sepaket</option>
                                         <option value="Riot">Riot ID</option>
                                         <option value="Link/File">Direct Link / File</option>
                                     </select>
@@ -412,60 +413,151 @@
                                 <div id="spec-fields-ff" class="space-y-2.5">
                                     <div class="grid grid-cols-2 gap-2">
                                         <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Status Bind</label>
+                                            <input type="text" id="spec-ff-bind" placeholder="Kosong / Terisi Aman" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
                                             <label class="block text-[10px] text-slate-300 mb-1">Level Akun FF</label>
                                             <input type="text" id="spec-ff-level" placeholder="Lv. 70+" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                         </div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
                                         <div>
                                             <label class="block text-[10px] text-slate-300 mb-1">Prime / Season (1-8)</label>
                                             <select id="spec-ff-prime" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
-                                                <option value="Prime 1">Prime 1</option>
-                                                <option value="Prime 2">Prime 2</option>
-                                                <option value="Prime 3">Prime 3</option>
-                                                <option value="Prime 4">Prime 4</option>
-                                                <option value="Prime 5">Prime 5</option>
-                                                <option value="Prime 6">Prime 6</option>
-                                                <option value="Prime 7">Prime 7</option>
-                                                <option value="Prime 8">Prime 8</option>
+                                                <option value="Prime 1">Prime 1</option><option value="Prime 2">Prime 2</option><option value="Prime 3">Prime 3</option><option value="Prime 4">Prime 4</option><option value="Prime 5">Prime 5</option><option value="Prime 6">Prime 6</option><option value="Prime 7">Prime 7</option><option value="Prime 8">Prime 8</option>
                                             </select>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Umur Akun (Hari)</label>
+                                            <input type="text" id="spec-ff-age" placeholder="1000+ Hari" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                         </div>
                                     </div>
                                     <div class="grid grid-cols-2 gap-2">
                                         <div>
-                                            <label class="block text-[10px] text-slate-300 mb-1">Booyah Pass / Elite Pass</label>
-                                            <input type="text" id="spec-ff-ep" placeholder="EP Old / BP Aktif" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                            <label class="block text-[10px] text-slate-300 mb-1">Total Rank Heroic BR</label>
+                                            <input type="text" id="spec-ff-br" placeholder="10x Heroic" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                         </div>
                                         <div>
-                                            <label class="block text-[10px] text-slate-300 mb-1">Inkubator Utama (1 s.d 5)</label>
-                                            <select id="spec-ff-incu" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
-                                                <option value="Incu 1 (Top Tier)">Incu 1 (Top Tier)</option>
-                                                <option value="Incu 2">Incu 2</option>
-                                                <option value="Incu 3">Incu 3</option>
-                                                <option value="Incu 4">Incu 4</option>
-                                                <option value="Incu 5 (Standard)">Incu 5 (Standard)</option>
-                                            </select>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Total Rank Heroic CS</label>
+                                            <input type="text" id="spec-ff-cs" placeholder="5x Master CS" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                         </div>
                                     </div>
                                     <div class="grid grid-cols-2 gap-2">
                                         <div>
-                                            <label class="block text-[10px] text-slate-300 mb-1">Jumlah Bundle</label>
-                                            <input type="text" id="spec-ff-bundle" placeholder="50+ Bundle Langka" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                            <label class="block text-[10px] text-slate-300 mb-1">Elite Pass (0-100)</label>
+                                            <input type="text" id="spec-ff-ep" placeholder="15x EP Old" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                         </div>
                                         <div>
-                                            <label class="block text-[10px] text-slate-300 mb-1">Jumlah Set / Skin SG</label>
-                                            <input type="text" id="spec-ff-set" placeholder="SG Ungu / SG 2" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                            <label class="block text-[10px] text-slate-300 mb-1">Booyah Pass (0-100)</label>
+                                            <input type="text" id="spec-ff-bp" placeholder="5x BP Aktif" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                         </div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Total Evo Gun</label>
+                                            <input type="text" id="spec-ff-evogun" placeholder="Scar Megalodon Lv.5" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Total Incubator Utama</label>
+                                            <input type="text" id="spec-ff-incu" placeholder="3 Incu Utama" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Total Bundle / Set</label>
+                                            <input type="text" id="spec-ff-bundle" placeholder="50+ Bundle & SG Ungu" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Skin Senjata / Emot</label>
+                                            <input type="text" id="spec-ff-skin" placeholder="100+ Skin & Emot Petarung" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Karakter Skill Aktif</label>
+                                            <input type="text" id="spec-ff-active" placeholder="Alok, Chrono, Skyler" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Karakter Skill Pasive</label>
+                                            <input type="text" id="spec-ff-passive" placeholder="Kelly, Hayato, Jota" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Legends Specific Fields -->
+                                <div id="spec-fields-ml" class="space-y-2.5 hidden">
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Rank Tertinggi</label>
+                                            <input type="text" id="spec-ml-rank" placeholder="Mythical Immortal [50 Bintang]" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">WR Total (%)</label>
+                                            <input type="text" id="spec-ml-wr" placeholder="WR 68.5%" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Level Akun</label>
+                                            <input type="text" id="spec-ml-level" placeholder="Lv. 120" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Total Hero</label>
+                                            <input type="text" id="spec-ml-hero" placeholder="115 Hero" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Total Skin</label>
+                                            <input type="text" id="spec-ml-skin" placeholder="180 Skin" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] text-slate-300 mb-1">Level Emblem</label>
+                                        <input type="text" id="spec-ml-emblem" placeholder="All Max (Level 60)" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Skin Legend/Collector/KOF</label>
+                                            <input type="text" id="spec-ml-sultan" placeholder="Gusion Legend, Chou KOF" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Skin Aspirants/HERO/Epic</label>
+                                            <input type="text" id="spec-ml-event" placeholder="Fanny Aspirants, Lancelot HERO" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] text-slate-300 mb-1">Efek Battle / Recall Limited</label>
+                                        <input type="text" id="spec-ml-recall" placeholder="Seal of Anvil Crawlers" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                     </div>
                                 </div>
 
                                 <!-- Cheat / Tools Specific Fields -->
                                 <div id="spec-fields-cheat" class="space-y-2.5 hidden">
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Jenis Cheat (Ketuk Manual)</label>
+                                            <input type="text" id="spec-cheat-name" placeholder="Free Fire VIP Panel / MLBB ESP" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                        <div>
+                                            <label class="block text-[10px] text-slate-300 mb-1">Tipe File</label>
+                                            <input type="text" id="spec-cheat-filetype" placeholder="APK Mod / File Script OBB" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        </div>
+                                    </div>
                                     <div>
-                                        <label class="block text-[10px] text-slate-300 mb-1">Mode Instalasi Cheat</label>
-                                        <select id="spec-cheat-type" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
+                                        <label class="block text-[10px] text-slate-300 mb-1">Mode Instalasi</label>
+                                        <select id="spec-cheat-mode" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                             <option value="Non-Root (Aman & Mudah)">Non-Root (Aman & Mudah)</option>
                                             <option value="Root (Full Feature & Bypass)">Root (Full Feature & Bypass)</option>
                                             <option value="Keduanya (Root & Non-Root)">Keduanya (Root & Non-Root)</option>
                                         </select>
+                                    </div>
+                                </div>
+
+                                <!-- Joki Specific Fields -->
+                                <div id="spec-fields-joki" class="space-y-2.5 hidden">
+                                    <div>
+                                        <label class="block text-[10px] text-slate-300 mb-1">Kategori Joki & Estimasi Waktu</label>
+                                        <input type="text" id="spec-joki-info" placeholder="Joki FF/MLBB - Estimasi 1-3 Hari + Bonus Garansi" class="w-full px-2.5 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs">
                                     </div>
                                 </div>
                             </div>
@@ -874,17 +966,25 @@
         function setupDynamicCategoryForm() {
             const catSelect = document.getElementById('prod-category');
             const specFF = document.getElementById('spec-fields-ff');
+            const specML = document.getElementById('spec-fields-ml');
             const specCheat = document.getElementById('spec-fields-cheat');
+            const specJoki = document.getElementById('spec-fields-joki');
 
             function updateSpecVisibility() {
                 const val = catSelect.value;
                 specFF.classList.add('hidden');
+                specML.classList.add('hidden');
                 specCheat.classList.add('hidden');
+                specJoki.classList.add('hidden');
 
                 if (val === 'FF') {
                     specFF.classList.remove('hidden');
+                } else if (val === 'ML') {
+                    specML.classList.remove('hidden');
                 } else if (val === 'CHEAT') {
                     specCheat.classList.remove('hidden');
+                } else if (val === 'JOKI') {
+                    specJoki.classList.remove('hidden');
                 }
             }
 
@@ -936,16 +1036,42 @@
             let specs = {};
             if (category === 'FF') {
                 specs = {
+                    bind: document.getElementById('spec-ff-bind').value || '-',
                     level: document.getElementById('spec-ff-level').value || '-',
                     prime: document.getElementById('spec-ff-prime').value || '-',
+                    age: document.getElementById('spec-ff-age').value || '-',
+                    br: document.getElementById('spec-ff-br').value || '-',
+                    cs: document.getElementById('spec-ff-cs').value || '-',
                     ep: document.getElementById('spec-ff-ep').value || '-',
+                    bp: document.getElementById('spec-ff-bp').value || '-',
+                    evogun: document.getElementById('spec-ff-evogun').value || '-',
                     incu: document.getElementById('spec-ff-incu').value || '-',
                     bundle: document.getElementById('spec-ff-bundle').value || '-',
-                    set: document.getElementById('spec-ff-set').value || '-'
+                    skin: document.getElementById('spec-ff-skin').value || '-',
+                    active: document.getElementById('spec-ff-active').value || '-',
+                    passive: document.getElementById('spec-ff-passive').value || '-'
+                };
+            } else if (category === 'ML') {
+                specs = {
+                    rank: document.getElementById('spec-ml-rank').value || '-',
+                    wr: document.getElementById('spec-ml-wr').value || '-',
+                    level: document.getElementById('spec-ml-level').value || '-',
+                    hero: document.getElementById('spec-ml-hero').value || '-',
+                    skin: document.getElementById('spec-ml-skin').value || '-',
+                    emblem: document.getElementById('spec-ml-emblem').value || '-',
+                    sultan: document.getElementById('spec-ml-sultan').value || '-',
+                    event: document.getElementById('spec-ml-event').value || '-',
+                    recall: document.getElementById('spec-ml-recall').value || '-'
                 };
             } else if (category === 'CHEAT') {
                 specs = {
-                    cheatType: document.getElementById('spec-cheat-type').value || '-'
+                    cheatName: document.getElementById('spec-cheat-name').value || '-',
+                    filetype: document.getElementById('spec-cheat-filetype').value || '-',
+                    cheatMode: document.getElementById('spec-cheat-mode').value || '-'
+                };
+            } else if (category === 'JOKI') {
+                specs = {
+                    jokiInfo: document.getElementById('spec-joki-info').value || '-'
                 };
             }
 
@@ -998,17 +1124,38 @@
             document.getElementById('prod-desc').value = p.desc || '';
 
             if (p.category === 'FF' && p.specs) {
+                document.getElementById('spec-ff-bind').value = p.specs.bind || '';
                 document.getElementById('spec-ff-level').value = p.specs.level || '';
                 document.getElementById('spec-ff-prime').value = p.specs.prime || 'Prime 1';
+                document.getElementById('spec-ff-age').value = p.specs.age || '';
+                document.getElementById('spec-ff-br').value = p.specs.br || '';
+                document.getElementById('spec-ff-cs').value = p.specs.cs || '';
                 document.getElementById('spec-ff-ep').value = p.specs.ep || '';
-                document.getElementById('spec-ff-incu').value = p.specs.incu || 'Incu 1 (Top Tier)';
+                document.getElementById('spec-ff-bp').value = p.specs.bp || '';
+                document.getElementById('spec-ff-evogun').value = p.specs.evogun || '';
+                document.getElementById('spec-ff-incu').value = p.specs.incu || '';
                 document.getElementById('spec-ff-bundle').value = p.specs.bundle || '';
-                document.getElementById('spec-ff-set').value = p.specs.set || '';
+                document.getElementById('spec-ff-skin').value = p.specs.skin || '';
+                document.getElementById('spec-ff-active').value = p.specs.active || '';
+                document.getElementById('spec-ff-passive').value = p.specs.passive || '';
+            } else if (p.category === 'ML' && p.specs) {
+                document.getElementById('spec-ml-rank').value = p.specs.rank || '';
+                document.getElementById('spec-ml-wr').value = p.specs.wr || '';
+                document.getElementById('spec-ml-level').value = p.specs.level || '';
+                document.getElementById('spec-ml-hero').value = p.specs.hero || '';
+                document.getElementById('spec-ml-skin').value = p.specs.skin || '';
+                document.getElementById('spec-ml-emblem').value = p.specs.emblem || '';
+                document.getElementById('spec-ml-sultan').value = p.specs.sultan || '';
+                document.getElementById('spec-ml-event').value = p.specs.event || '';
+                document.getElementById('spec-ml-recall').value = p.specs.recall || '';
             } else if (p.category === 'CHEAT' && p.specs) {
-                document.getElementById('spec-cheat-type').value = p.specs.cheatType || 'Non-Root (Aman & Mudah)';
+                document.getElementById('spec-cheat-name').value = p.specs.cheatName || '';
+                document.getElementById('spec-cheat-filetype').value = p.specs.filetype || '';
+                document.getElementById('spec-cheat-mode').value = p.specs.cheatMode || 'Non-Root (Aman & Mudah)';
+            } else if (p.category === 'JOKI' && p.specs) {
+                document.getElementById('spec-joki-info').value = p.specs.jokiInfo || '';
             }
 
-            // Trigger category change to toggle specs visibility
             document.getElementById('prod-category').dispatchEvent(new Event('change'));
 
             formProductHeading.innerHTML = `<i data-lucide="edit-3" class="w-4 h-4 text-amber-400"></i> Edit Produk: ${p.title}`;
@@ -1209,17 +1356,39 @@
             document.getElementById('modal-title').textContent = p.title;
             document.getElementById('modal-desc').textContent = p.desc || 'Tidak ada deskripsi tambahan.';
 
-            // Render specs details in modal
+            // Render specs details in modal based on category
             const specsBox = document.getElementById('modal-specs-box');
             specsBox.innerHTML = '';
             if (p.category === 'FF' && p.specs) {
                 specsBox.innerHTML = `
-                    <div>&bull; Level: <b>${p.specs.level}</b> | Prime: <b>${p.specs.prime}</b></div>
-                    <div>&bull; Booyah Pass: <b>${p.specs.ep}</b> | Incu: <b>${p.specs.incu}</b></div>
-                    <div>&bull; Bundle: <b>${p.specs.bundle}</b> | Set/Skin: <b>${p.specs.set}</b></div>
+                    <div>&bull; Status Bind: <b>${p.specs.bind}</b> | Level: <b>${p.specs.level}</b></div>
+                    <div>&bull; Prime: <b>${p.specs.prime}</b> | Umur Akun: <b>${p.specs.age}</b></div>
+                    <div>&bull; Rank Heroic (BR/CS): <b>${p.specs.br}</b> / <b>${p.specs.cs}</b></div>
+                    <div>&bull; Elite Pass / BP: <b>${p.specs.ep}</b> / <b>${p.specs.bp}</b></div>
+                    <div>&bull; Evo Gun / Incu: <b>${p.specs.evogun}</b> / <b>${p.specs.incu}</b></div>
+                    <div>&bull; Bundle/Set & Skin: <b>${p.specs.bundle}</b> (${p.specs.skin})</div>
+                    <div>&bull; Karakter Aktif/Pasif: <b>${p.specs.active}</b> / <b>${p.specs.passive}</b></div>
+                `;
+            } else if (p.category === 'ML' && p.specs) {
+                specsBox.innerHTML = `
+                    <div>&bull; Rank Tertinggi: <b>${p.specs.rank}</b> | WR Total: <b>${p.specs.wr}</b></div>
+                    <div>&bull; Level Akun: <b>${p.specs.level}</b> | Hero/Skin: <b>${p.specs.hero}</b> / <b>${p.specs.skin}</b></div>
+                    <div>&bull; Level Emblem: <b>${p.specs.emblem}</b></div>
+                    <div>&bull; Skin Sultan: <b>${p.specs.sultan}</b></div>
+                    <div>&bull; Skin Event/Epic: <b>${p.specs.event}</b></div>
+                    <div>&bull; Recall Limited: <b>${p.specs.recall}</b></div>
                 `;
             } else if (p.category === 'CHEAT' && p.specs) {
-                specsBox.innerHTML = `<div>&bull; Tipe Instalasi: <b>${p.specs.cheatType}</b></div>`;
+                specsBox.innerHTML = `
+                    <div>&bull; Nama Cheat: <b>${p.specs.cheatName}</b></div>
+                    <div>&bull; Tipe File: <b>${p.specs.filetype}</b></div>
+                    <div>&bull; Mode Instalasi: <b>${p.specs.cheatMode}</b></div>
+                `;
+            } else if (p.category === 'JOKI' && p.specs) {
+                specsBox.innerHTML = `
+                    <div>&bull; Info Joki & Waktu: <b>${p.specs.jokiInfo}</b></div>
+                    <div class="text-amber-400">&bull; Garansi Keamanan: 100% Anti Banned & Anti Log-in Ganda!</div>
+                `;
             } else {
                 specsBox.innerHTML = `<div>&bull; Kategori: <b>${p.category}</b> (${p.loginType})</div>`;
             }
@@ -1276,7 +1445,7 @@
             vouchMsg.classList.remove('hidden');
         });
 
-        // WhatsApp Checkout with Precise Timestamp Recording
+        // WhatsApp Checkout with Precise Detailed Message Generation
         document.getElementById('modal-btn-checkout').addEventListener('click', async () => {
             if(!selectedProductForModal) return;
             const p = selectedProductForModal;
@@ -1310,11 +1479,24 @@
                 status: 'Menunggu Pembayaran'
             });
 
+            // Constructing detailed specs text for WhatsApp
+            let specDetailText = '';
+            if (p.category === 'FF' && p.specs) {
+                specDetailText = `%0A&bull; Status Bind: ${p.specs.bind}%0A&bull; Level: ${p.specs.level}%0A&bull; Prime: ${p.specs.prime}%0A&bull; Umur Akun: ${p.specs.age}%0A&bull; Rank BR/CS: ${p.specs.br} / ${p.specs.cs}%0A&bull; EP/BP: ${p.specs.ep} / ${p.specs.bp}%0A&bull; Evo Gun/Incu: ${p.specs.evogun} / ${p.specs.incu}%0A&bull; Bundle/Skin: ${p.specs.bundle} (${p.specs.skin})%0A&bull; Skill Aktif/Pasif: ${p.specs.active} / ${p.specs.passive}`;
+            } else if (p.category === 'ML' && p.specs) {
+                specDetailText = `%0A&bull; Rank Tertinggi: ${p.specs.rank}%0A&bull; WR Total: ${p.specs.wr}%0A&bull; Level & Hero: Lv.${p.specs.level} | ${p.specs.hero} Hero%0A&bull; Total Skin: ${p.specs.skin}%0A&bull; Emblem: ${p.specs.emblem}%0A&bull; Skin Sultan/Event: ${p.specs.sultan}, ${p.specs.event}%0A&bull; Recall: ${p.specs.recall}`;
+            } else if (p.category === 'CHEAT' && p.specs) {
+                specDetailText = `%0A&bull; Nama Cheat: ${p.specs.cheatName}%0A&bull; Tipe File: ${p.specs.filetype}%0A&bull; Mode: ${p.specs.cheatMode}`;
+            } else if (p.category === 'JOKI' && p.specs) {
+                specDetailText = `%0A&bull; Info Joki: ${p.specs.jokiInfo}%0A&bull; Garansi: Anti Banned & Anti Log-in Ganda`;
+            }
+
             const message = `*NEW ORDER - DAF ACCOUNT STORE*%0A%0A` +
                             `&bull; *ID Pesanan:* #${orderId.slice(-6)}%0A` +
                             `&bull; *Waktu:* ${fullTimestamp}%0A` +
                             `&bull; *Produk:* ${p.title}%0A` +
                             `&bull; *Kategori:* ${p.category} (${p.loginType})%0A` +
+                            `${specDetailText}%0A%0A` +
                             `&bull; *Harga Akhir:* Rp ${base.toLocaleString()}%0A%0A` +
                             `*Nomor Pembeli:* +${currentUser}%0A` +
                             `Mohon kirimkan detail akun/file/instruksi selanjutnya. Terima kasih!`;
